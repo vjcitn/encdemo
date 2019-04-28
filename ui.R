@@ -16,7 +16,14 @@ ui = fluidPage(
    ),
   mainPanel(tabsetPanel(id="tabs", 
    tabPanel("viz", plotOutput("gg1")),
-   tabPanel("about", helpText("A collection of 15 narrowPeak.gz files were retrieved from hg19 goldenpath UCSC genome browser resources, to illustrate elementary aspects of cell-type-specific transcription factor binding."))
+   tabPanel("about", 
+     helpText("A collection of narrowPeak.gz files were retrieved from hg19 goldenpath UCSC genome 
+          browser resources, to illustrate elementary aspects of 
+          cell-type-specific transcription factor binding."),
+     helpText("The file URLs are obtained from the encode690 component of the TFutils package."),
+     helpText("Counts of regions tabulated by cell type and TF are:"),
+     verbatimTextOutput("design")
+   )
   )
  )
 )

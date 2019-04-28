@@ -69,6 +69,9 @@ if (!exists("encsel2")) load("encsel2.rda")
        ans = NULL
        stopApp(returnValue=ans)
        })  
+  output$design = renderPrint({
+    table(encsel2$cell, encsel2$factor)
+    })
 
 }
    
